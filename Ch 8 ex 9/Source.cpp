@@ -49,7 +49,7 @@ int main() {
 		cout << "\n";
 	}
 
-	cout << "The index = " << calc_index(price, weight);
+	cout << "The index = " << calc_index(price, weight) << "\n";
 	keep_window_open();
 }
 
@@ -62,7 +62,7 @@ double calc_index(vector<double>& p, vector<double>& w) {
 	auto w_itr = w.begin();
 	double index{ 0 };
 	for (double p : p) {
-		index += p * *w_itr;
+		index += p * *w_itr++;
 	}
 	return index;
 }
